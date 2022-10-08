@@ -55,7 +55,7 @@ img = cv2.imread(IN_IMAGE,cv2.IMREAD_UNCHANGED)
 # exit()
 
 
-# GENERATE OUTPUT IMAGE DUMMY (!HARD CODED!)
+# GENERATE OUTPUT IMAGE DUMMY
 output = np.zeros(img.shape)
 
 for y in range(0,len(img)):
