@@ -15,9 +15,8 @@ Comments    :   I have no idea how freeform gradient's algo works I'm just playi
 ## IMAGE MUST BE A PNG FILE WITH ALPHA CHANNEL AVAILABLE
 
 ## INPUT IMAGE LOCATION
-IN_IMAGE = "lerp_it_3.png"
-OUT_IMAGE = "lerped_it_3_.png"
-
+IN_IMAGE = "lerp_it_4.png"
+OUT_IMAGE = "lerped_it_4.png"
 
 ########### CODE ##############
 '''
@@ -52,6 +51,9 @@ def getAPIsRow(img_row) -> array:
 
 # LOAD THE IMAGE WITH ALPHA CHANNEL — 'IMREAD_UNCHANGED' DOES THAT FOR US
 img = cv2.imread(IN_IMAGE,cv2.IMREAD_UNCHANGED)
+# print(getAPIsRow(img[0]))
+# exit()
+
 
 # GENERATE OUTPUT IMAGE DUMMY (!HARD CODED!)
 output = np.zeros(img.shape)
@@ -70,6 +72,7 @@ for y in range(0,len(img)):
         _start = alphaIndexes[index]    # eg: 0
         _end = alphaIndexes[index+1]    # eg: 3
         
+        print(f'start: {_start} end: {_end}')
         # img[y][_start] = Start pixel  eg: [0 0   0 255]
         # img[y][_end] = End pixel      eg: [0 255 0 255]
 
@@ -77,7 +80,8 @@ for y in range(0,len(img)):
         # Lerp the pixels and update the output
         # Checkout the "example.py" to understand how the following loop works
         for i in range(_start,_end):
-            _t = i/_end # Gets the t value for the pixels
+            _t = round(((i-_start)/(_end-_start)),3) # Gets the t value for the pixels
+            print(f'i: {i} (i-_start): {i-_start} _t: {_t}')
             output[y][i] = lerpArray(img[y][_start],img[y][_end],_t)
 
         # break the loop if we are at second last item cause
@@ -93,6 +97,8 @@ for y in range(0,len(img)):
     # OUTER FOR LOOP ENDS HERE
 
 # print(output)
-
-# SAVE THE OUTPUT TO A FILE
-cv2.imwrite(OUT_IMAGE, output)
+# # SAVE THE OUTPUT TO A FILE
+img_float32 = np.float32(output)
+# color correction
+lab_image = cv2.cvtColor(img_float32, cv2.COLOR_BGRA2RGBA)
+cv2.imwrite(OUT_IMAGE,img_float32)
