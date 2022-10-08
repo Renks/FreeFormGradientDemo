@@ -81,6 +81,7 @@ for y in range(0,len(img)):
         # Lerp the pixels and update the output
         # Checkout the "example.py" to understand how the following loop works
         for i in range(_start,_end):
+            ## NORMALIZE THE _t in range(0,1) and rounds to 3 decimal places
             _t = round(((i-_start)/(_end-_start)),3) # Gets the t value for the pixels
             # Debug print
             print(f'i: {i} (i-_start): {i-_start} _t: {_t}')
