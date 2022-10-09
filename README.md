@@ -1,4 +1,8 @@
-# Python FreeForm Gradient (Inspired by Clip Studio Paint )
+<center><h1>Python Freeform Gradient</h1></center>
+
+<center><h2>(Inspired by Clip Studio Paint )</h2></center>
+
+
 
 **Requirements:**
 
@@ -34,16 +38,16 @@ python main.py
 
 **Input #1**
 
-<img title="Input Image 1" src="imgs\demo_10.png" alt="demo_10.png" width="256">
+![demo_10.png](imgs\demo_10.png)
 
 **Output #1**
 
-<img title="Output Image 1" src="imgs\demo_10_UPDATED.png" alt="demo_10_UPDATED.png" width="256">
+![demo_10_UPDATED.png](imgs\demo_10_UPDATED.png)
 
 **Input #2**
 
-<img title="Input Image 2" src="imgs\Face_Shadow_input.png" alt="Face_Shadow_input.png" width="316">
+<img title="" src="imgs\Face_Shadow_input.png" alt="Face_Shadow_input.png" width="316">
 
 **Output #2**
 
-<img title="Output Image 2" src="imgs\Face_Shadow_input_UPDATED.png" alt="Face_Shadow_input_UPDATED.png" width="340">
+<img title="" src="imgs\Face_Shadow_input_UPDATED.png" alt="Face_Shadow_input_UPDATED.png" width="340">
