@@ -50,3 +50,11 @@ python main.py
 **Output #2**
 
 <img title="Output Image 1" src="imgs\Face_Shadow_input_UPDATED.png" alt="Face_Shadow_input_UPDATED.png" width="340">
+
+**Input #3**
+
+<img title="Input Image 3" src="imgs\Pumpkin.png" alt="Pumpkin.png" width="316">
+
+**Output #3**
+
+<img title="Output Image 3" src="imgs\Pumpkin_UPDATED.png" alt="Pumpkin_UPDATED.png" width="340">
