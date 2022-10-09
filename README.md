@@ -49,7 +49,7 @@ python main.py
 
 **Output #2**
 
-<img title="Output Image 1" src="imgs\Face_Shadow_input_UPDATED.png" alt="Face_Shadow_input_UPDATED.png" width="340">
+<img title="Output Image 2" src="imgs\Face_Shadow_input_UPDATED.png" alt="Face_Shadow_input_UPDATED.png" width="340">
 
 **Input #3**
 
