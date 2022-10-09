@@ -16,7 +16,7 @@ Comments    :   I have no idea how freeform gradient's algo works I'm just playi
 ## !{{{   IMAGE MUST BE A PNG FILE WITH ALPHA CHANNEL AVAILABLE   }}}!
 
 ## INPUT IMAGE LOCATION (Do NOT change extension from .png to anything else)
-IN_IMAGE_NAM = "IMAGE_NAME_GOES_HERE"     # No need to add extension
+IN_IMAGE_NAM = "Pumpkin"     # No need to add extension
 IN_IMAGE_EXT = ".png"       # ONLY WORKS FOR PNGs (for now)
 
 
