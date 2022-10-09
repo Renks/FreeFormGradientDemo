@@ -16,7 +16,7 @@ Comments    :   I have no idea how freeform gradient's algo works I'm just playi
 ## !{{{   IMAGE MUST BE A PNG FILE WITH ALPHA CHANNEL AVAILABLE   }}}!
 
 ## INPUT IMAGE LOCATION (Do NOT change extension from .png to anything else)
-IN_IMAGE_NAM = "demo_7"     # No need to add extension
+IN_IMAGE_NAM = "IMAGE_NAME_GOES_HERE"     # No need to add extension
 IN_IMAGE_EXT = ".png"       # ONLY WORKS FOR PNGs (for now)
 
 
@@ -76,6 +76,7 @@ def getAPIsRow(img_row) -> array:
 
 # LOAD THE IMAGE WITH ALPHA CHANNEL — 'IMREAD_UNCHANGED' DOES THAT FOR US
 img = cv2.imread(IN_IMAGE_NAM+IN_IMAGE_EXT,cv2.IMREAD_UNCHANGED)
+
 
 # GENERATE OUTPUT IMAGE DUMMY
 output = np.zeros(img.shape)
