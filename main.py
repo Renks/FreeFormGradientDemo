@@ -110,7 +110,7 @@ for y in range(0,len(img)):
             
             # Debug print
             #print(f'i: {i} (i-_start): {i-_start} _t: {_t} pixelVal: {output[y][i]}')
-            # # Debug print Advance
+            # # Debug print Advance (Windows Terminal Only)
             r = int(output[y][i][0])
             g = int(output[y][i][1])
             b = int(output[y][i][2])
