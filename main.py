@@ -1,7 +1,6 @@
 from array import array
 import cv2
 import numpy as np
-from matplotlib import pyplot as plt
 
 
 '''
@@ -14,13 +13,15 @@ Comments    :   I have no idea how freeform gradient's algo works I'm just playi
 
 
 
-## IMAGE MUST BE A PNG FILE WITH ALPHA CHANNEL AVAILABLE
+## !{{{   IMAGE MUST BE A PNG FILE WITH ALPHA CHANNEL AVAILABLE   }}}!
 
-## INPUT IMAGE LOCATION (make sure to add .png)
-IN_IMAGE = "demo_10.png"
+## INPUT IMAGE LOCATION (Do NOT change extension from .png to anything else)
+IN_IMAGE_NAM = "demo_7"     # No need to add extension
+IN_IMAGE_EXT = ".png"       # ONLY WORKS FOR PNGs (for now)
 
-## OUTPUT IMAGE LOCATION (make sure to add .png)
-OUT_IMAGE = IN_IMAGE+"_UPDATED.png"
+
+## OUTPUT IMAGE LOCATION (Do NOT change extension from .png to anything else)
+OUT_IMAGE = IN_IMAGE_NAM+"_UPDATED.png"
 
 ########### CODE ##############
 '''
@@ -30,7 +31,7 @@ def lerp(A:float,B:float,t:float):
     return ((B-A)*t)+A
 
 '''
-    lerp for numpy arrays
+    lerp for numpy arrays (BROKEN)
 '''
 def lerpArray(A:np.ndarray,B:np.ndarray,t:float):
     # A+t(B-A)
@@ -74,7 +75,7 @@ def getAPIsRow(img_row) -> array:
 
 
 # LOAD THE IMAGE WITH ALPHA CHANNEL — 'IMREAD_UNCHANGED' DOES THAT FOR US
-img = cv2.imread(IN_IMAGE,cv2.IMREAD_UNCHANGED)
+img = cv2.imread(IN_IMAGE_NAM+IN_IMAGE_EXT,cv2.IMREAD_UNCHANGED)
 
 # GENERATE OUTPUT IMAGE DUMMY
 output = np.zeros(img.shape)
@@ -94,7 +95,7 @@ for y in range(0,len(img)):
         _end = alphaIndexes[index+1]    # eg: 3
         
         # Debug print
-        print(f'start: {_start} end: {_end}')
+        #print(f'start: {_start} end: {_end}')
         # img[y][_start] = Start pixel  eg: [0 0   0 255]
         # img[y][_end] = End pixel      eg: [0 255 0 255]
 
@@ -102,7 +103,7 @@ for y in range(0,len(img)):
         # Lerp the pixels and update the output
         # Checkout the "example.py" to understand how the following loop works
         for i in range(_start,_end):
-            ## NORMALIZE THE _t in range(0,1) and rounds to 3 decimal places
+            ## NORMALIZE THE _t in range(0,1) and rounds to 2 decimal places
             _t = round(((i-_start)/(_end-_start)),2) # Gets the t value for the pixels
             # lerp from start pixel to end
             output[y][i] = lerpRGB(img[y][_start],img[y][_end],_t)
@@ -115,7 +116,7 @@ for y in range(0,len(img)):
             b = int(output[y][i][2])
             colored_output = colored(r,g,b,f'[{int(output[y][i][0])} \t {int(output[y][i][1])} \t {int(output[y][i][2])} \t {output[y][i][3]}]')
             print(f'i: {i}\t(i-_start): {i-_start}\t_t: {_t} \t pixelVal: {colored_output}')
-
+            # # Debug print Advance ends
 
         # break the loop if we are at second last item cause
         # second last index will account for last index using "index+1"
