@@ -45,16 +45,24 @@ python main.py
 
 **Input #2**
 
-<img title="Input Image 2" src="imgs\Face_Shadow_input.png" alt="Face_Shadow_input.png" width="316">
+<img title="Input Image 2" src="imgs\lerp_it_4.png" alt="lerp_it_4.png" width="256">
 
 **Output #2**
 
-<img title="Output Image 2" src="imgs\Face_Shadow_input_UPDATED.png" alt="Face_Shadow_input_UPDATED.png" width="340">
+<img title="Output Image 2" src="imgs\lerp_it_4_UPDATED.png" alt="lerp_it_4_UPDATED.png" width="256">
 
 **Input #3**
 
-<img title="Input Image 3" src="imgs\Pumpkin.png" alt="Pumpkin.png" width="316">
+<img title="Input Image 3" src="imgs\Face_Shadow_input.png" alt="Face_Shadow_input.png" width="316">
 
 **Output #3**
 
-<img title="Output Image 3" src="imgs\Pumpkin_UPDATED.png" alt="Pumpkin_UPDATED.png" width="340">
+<img title="Output Image 3" src="imgs\Face_Shadow_input_UPDATED.png" alt="Face_Shadow_input_UPDATED.png" width="340">
+
+**Input #4**
+
+<img title="Input Image 4" src="imgs\Pumpkin.png" alt="Pumpkin.png" width="316">
+
+**Output #4**
+
+<img title="Output Image 4" src="imgs\Pumpkin_UPDATED.png" alt="Pumpkin_UPDATED.png" width="340">
